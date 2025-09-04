@@ -77,7 +77,7 @@ export default function Recorder({ onUpload }) {
     formData.append("recording", blob, "recording.webm");
 
     try {
-      const uploadRes = await fetch("http://localhost:5000/api/recordings", {
+      const uploadRes = await fetch("https://assignment-amberflux.onrender.com/api/recordings", {
         method: "POST",
         body: formData,
       });

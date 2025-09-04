@@ -4,7 +4,7 @@ export default function RecordingsList({ refresh }) {
   const [recordings, setRecordings] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/recordings")
+    fetch("https://assignment-amberflux.onrender.com/api/recordings")
       .then((res) => res.json())
       .then((data) => setRecordings(data))
       .catch((err) => console.error("Fetch error:", err));
@@ -34,7 +34,7 @@ export default function RecordingsList({ refresh }) {
                 {new Date(rec.createdAt).toLocaleString()}
               </p>
               <video
-                src={`http://localhost:5000/${rec.filepath}`}
+                src={`https://assignment-amberflux.onrender.com/${rec.filepath}`}
                 controls
               ></video>
             </li>
